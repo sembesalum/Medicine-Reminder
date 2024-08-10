@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:medicine_reminder/pages/splash_screen/index.dart';
 import 'package:medicine_reminder/provider/counter_provider.dart';
-import 'package:medicine_reminder/screen/learning.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -16,12 +17,12 @@ class MyApp extends StatelessWidget {
     return MultiProvider(providers: [
       ChangeNotifierProvider(create: (context)=> CounterProvider(),),
     ],
-    child:  MaterialApp(
+    child:  GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.teal),
-      home: const LearningPage(),
+      home: SplashScreen(),
     ),
+    
     );
-  } 
+  }
 }
-
