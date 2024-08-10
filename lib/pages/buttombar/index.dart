@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:medicine_reminder/pages/add_medicine/index.dart';
 import 'package:medicine_reminder/pages/homepage_screen/index.dart';
+import 'package:medicine_reminder/pages/medicine_screen/index.dart';
 import 'package:medicine_reminder/pages/styles/appLayout.dart';
 
 
@@ -14,8 +16,8 @@ class _ButtomBarState extends State<ButtomBar> {
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
     const Homepage(),
-    const Text("Medicine"),
-    const Text("Add Medicine"),
+    const MedicineScreen(),
+    const AddMedicineScreen(),
     const Text("Profile")
   ];
 
