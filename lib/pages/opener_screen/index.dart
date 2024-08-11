@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicine_reminder/pages/authentications_screen/login/index.dart';
 import 'package:medicine_reminder/pages/styles/appStyles.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -70,7 +71,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                const Text(""), // Replace with actual screen
+                                const LoginScreen(), // Replace with actual screen
                           ),
                         );
                       },
