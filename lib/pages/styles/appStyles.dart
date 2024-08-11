@@ -13,7 +13,7 @@ class Styles {
   static Color textBlack = const Color.fromARGB(255, 255, 255, 255);
   static Color textBlueColor = const Color.fromARGB(255, 255, 255, 255);
   static Color bgColor = const Color(0xFFF9F9F9);
-  static Color splashScreen = const Color(0xFF4741A6);
+  static Color splashScreen =  Colors.lightBlueAccent;
   static Color chatBgColor = const Color(0xFF171717);
   static Color bottomColor = const Color(0xFF90AAD6);
   static Color searchBar = const Color.fromARGB(255, 218, 223, 229);

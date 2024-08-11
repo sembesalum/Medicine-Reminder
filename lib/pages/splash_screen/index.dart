@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:medicine_reminder/pages/buttombar/index.dart';
 import 'dart:async';
 
-import 'package:medicine_reminder/screen/learning.dart';
+import 'package:medicine_reminder/pages/opener_screen/index.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -46,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const ButtomBar(),
+          builder: (context) => const WelcomeScreen(),
         ),
       );
     });
