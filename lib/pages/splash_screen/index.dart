@@ -68,12 +68,12 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
           children: [
             ScaleTransition(
               scale: _logoAnimation,
-              child: Image.asset('assets/images/logo1.png', width: 150, height: 150), // App logo
+              child: Image.asset('assets/images/pill1.png', width: 150, height: 150), // App logo
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             FadeTransition(
               opacity: _textAnimation,
-              child: Text(
+              child: const Text(
                 'Nikumbushe',
                 style: TextStyle(
                   fontSize: 24,
@@ -82,14 +82,14 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             FadeTransition(
               opacity: _textAnimation,
-              child: Text(
+              child: const Text(
                 'Your Health, Our Priority',
                 style: TextStyle(
                   fontSize: 16,
-                  color: Colors.white70,
+                  color: Colors.white,
                 ),
               ),
             ),

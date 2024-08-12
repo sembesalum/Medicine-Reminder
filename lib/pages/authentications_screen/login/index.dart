@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:medicine_reminder/pages/authentications_screen/register/index.dart';
+import 'package:medicine_reminder/pages/options/gender/index.dart';
 import 'package:medicine_reminder/pages/styles/appStyles.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -118,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                const LoginScreen(), // Replace with actual screen
+                                const GenderScreen(), // Replace with actual screen
                           ),
                         );
                       },
