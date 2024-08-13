@@ -123,11 +123,11 @@ class _TabletAlertCardState extends State<TabletAlertCard> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(height: 9),
+                    const SizedBox(height: 5),
                     Text(
                       description,
                       style: const TextStyle(
-                        fontSize: 17,
+                        fontSize: 15,
                       ),
                     ),
                   ],

@@ -20,15 +20,15 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
   int selectedDays = 30; // Default to 30 days
 
   String medicineName = "Atorvastatin"; // Initial medicine name
-  String medicineReason = "Cardiovascular"; // Initial medicine name
+  String medicineReason = "Maumivu ya Mbavu"; // Initial medicine name
 
   void _incrementDose(String timeOfDay) {
     setState(() {
-      if (timeOfDay == "Morning") {
+      if (timeOfDay == "Asubuuhi") {
         morningDose++;
-      } else if (timeOfDay == "Evening") {
+      } else if (timeOfDay == "Mchana") {
         eveningDose++;
-      } else if (timeOfDay == "Night") {
+      } else if (timeOfDay == "Usiku") {
         nightDose++;
       }
     });
@@ -36,11 +36,11 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
 
   void _decrementDose(String timeOfDay) {
     setState(() {
-      if (timeOfDay == "Morning" && morningDose > 0) {
+      if (timeOfDay == "Asubuhi" && morningDose > 0) {
         morningDose--;
-      } else if (timeOfDay == "Evening" && eveningDose > 0) {
+      } else if (timeOfDay == "Mchana" && eveningDose > 0) {
         eveningDose--;
-      } else if (timeOfDay == "Night" && nightDose > 0) {
+      } else if (timeOfDay == "Usiku" && nightDose > 0) {
         nightDose--;
       }
     });
@@ -55,7 +55,7 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
         return AlertDialog(
           backgroundColor: Colors.white, // Set dialog background color to white
           title: const Text(
-            "Select Number of Days",
+            "Utatumia Dawa Siku Ngapi?",
             style: TextStyle(color: Colors.black),
           ), // Apply Styles.homescreen
           content: StatefulBuilder(
@@ -64,7 +64,7 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    "$tempSelectedDays days",
+                    "$tempSelectedDays siku",
                     style: const TextStyle(color: Colors.black).copyWith(fontSize: 20),
                   ),
                   Slider(
@@ -72,7 +72,7 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
                     min: 1,
                     max: 365,
                     divisions: 364,
-                    label: "$tempSelectedDays days",
+                    label: "$tempSelectedDays siku",
                     onChanged: (double newValue) {
                       setState(() {
                         tempSelectedDays = newValue.round();
@@ -88,7 +88,7 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: const Text("Cancel", style: TextStyle(color: Colors.black)),
+              child: const Text("BATILISHA", style: TextStyle(color: Colors.black)),
             ),
             ElevatedButton(
               onPressed: () {
@@ -97,7 +97,7 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Styles.splashScreen,
               ),
-              child: Text("OK", style: TextStyle(color: Styles.homescreen)),
+              child: Text("THIBITISHA", style: TextStyle(color: Styles.homescreen)),
             ),
           ],
         );
@@ -115,7 +115,7 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
           top: Radius.circular(20),
         ),
@@ -134,7 +134,7 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                "Enter Medicine Name",
+                "Weka Jina La Dawa",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 16),
@@ -143,7 +143,7 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
                   tempMedicineName = value;
                 },
                 decoration: const InputDecoration(
-                  labelText: "Medicine Name",
+                  labelText: "Jina La Dawa",
                   border: OutlineInputBorder(),
                 ),
               ),
@@ -158,7 +158,7 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Styles.splashScreen,
                 ),
-                child: const Text("Save", style: TextStyle(color: Colors.white)),
+                child: const Text("HIFADHI", style: TextStyle(color: Colors.white)),
               ),
               const SizedBox(height: 16),
             ],
@@ -173,7 +173,7 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Add Medicine",
+          "Ongeza Dawa",
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
         ),
       ),
@@ -185,7 +185,7 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  "Medicine",
+                  "Jina La Dawa",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 const SizedBox(height: 10),
@@ -229,32 +229,32 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  "Time",
+                  "Muda",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 const SizedBox(height: 10),
-                _buildTimeCheckbox("Morning", isMorningChecked, (bool? value) {
+                _buildTimeCheckbox("Asubuhi", isMorningChecked, (bool? value) {
                   setState(() {
                     isMorningChecked = value!;
                   });
                 }),
-                _buildTimeCheckbox("Evening", isEveningChecked, (bool? value) {
+                _buildTimeCheckbox("Mchana", isEveningChecked, (bool? value) {
                   setState(() {
                     isEveningChecked = value!;
                   });
                 }),
-                _buildTimeCheckbox("Night", isNightChecked, (bool? value) {
+                _buildTimeCheckbox("Usiku", isNightChecked, (bool? value) {
                   setState(() {
                     isNightChecked = value!;
                   });
                 }),
                 const SizedBox(height: 20),
-                if (isMorningChecked) _buildDoseSection("Morning", morningDose),
-                if (isEveningChecked) _buildDoseSection("Evening", eveningDose),
-                if (isNightChecked) _buildDoseSection("Night", nightDose),
+                if (isMorningChecked) _buildDoseSection("Asubuhi", morningDose),
+                if (isEveningChecked) _buildDoseSection("Mchana", eveningDose),
+                if (isNightChecked) _buildDoseSection("Usiku", nightDose),
                 const SizedBox(height: 20),
                 const Text(
-                  "How many days?",
+                  "Siku Ngapi?",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 const SizedBox(height: 10),
@@ -270,7 +270,7 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
                       children: [
                         const Icon(Icons.calendar_today),
                         const SizedBox(width: 10),
-                        Text("$selectedDays days"),
+                        Text("$selectedDays siku"),
                       ],
                     ),
                   ),
