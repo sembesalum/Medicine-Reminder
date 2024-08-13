@@ -24,7 +24,7 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
 
   void _incrementDose(String timeOfDay) {
     setState(() {
-      if (timeOfDay == "Asubuuhi") {
+      if (timeOfDay == "Asubuhi") {
         morningDose++;
       } else if (timeOfDay == "Mchana") {
         eveningDose++;

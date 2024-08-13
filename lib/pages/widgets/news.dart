@@ -22,19 +22,19 @@ class DoctorNews extends StatelessWidget {
                 children: [
                   _buildGridItem(
                     "assets/images/pill1.png",
-                    'Are you brushing enough?',
+                    'Je, unapiga mswaki vya kutosha?',
                   ),
                   _buildGridItem(
                     "assets/images/pill1.png",
-                    'Prevent Buildup',
+                    'Zuia Kunywa Dawa Ovyo',
                   ),
                   _buildGridItem(
                     "assets/images/pill1.png",
-                    'ToothIQ Archives',
+                    'Madhara ya Dawa Tatu',
                   ),
                   _buildGridItem(
                     "assets/images/pill1.png",
-                    'Teeth Plaque',
+                    'Ushauri wa Dozi',
                   ),
                 ],
               ),

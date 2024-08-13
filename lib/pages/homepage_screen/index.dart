@@ -77,19 +77,19 @@ class Homepage extends StatelessWidget {
         children: [
           _buildGridItem(
             "assets/images/news1.png",
-            'Are you brushing enough?',
+            'Je, unapiga mswaki vya kutosha?',
           ),
           _buildGridItem(
             "assets/images/news4.png",
-            'Prevent Buildup',
+            'Zuia Kunywa Dawa Ovyo',
           ),
           _buildGridItem(
             "assets/images/news3.png",
-            'ToothIQ Archives',
+            'Madhara ya Dawa Tatu',
           ),
           _buildGridItem(
             "assets/images/news2.png",
-            'Teeth Plaque',
+            'Ushauri wa Dozi',
           ),
         ],
       ),
