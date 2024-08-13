@@ -38,14 +38,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                   const SizedBox(height: 30),
                   const Text(
-                    "Get Started",
+                    "Karibu Sana",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 30),
                   const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
-                      "Get Started with our easy to use medicine reminder app. Start by adding all medication to the app",
+                      "Anza na programu yetu ya ukumbusho wa dawa ambayo ni rahisi kutumia. Anza kwa kuingiza dawa zote kwenye programu",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 15,
@@ -78,7 +78,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     child: const Padding(
                       padding: EdgeInsets.symmetric(vertical: 15),
                       child: Text(
-                        "Login",
+                        "Ingia",
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                     ),
@@ -100,7 +100,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     child: const Padding(
                       padding: EdgeInsets.symmetric(vertical: 15),
                       child: Text(
-                        "Create Account",
+                        "Fungua Account",
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                     ),

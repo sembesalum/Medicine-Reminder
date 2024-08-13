@@ -43,7 +43,7 @@ class _GenderScreenState extends State<GenderScreen> {
                 style: TextStyle(
                   color: isSelected ? Colors.white : Colors.black,
                   fontWeight: FontWeight.normal,
-                  fontSize: 18,
+                  fontSize: 15,
                 ),
               ),
             ],
@@ -84,7 +84,7 @@ class _GenderScreenState extends State<GenderScreen> {
             const Text(
               'Chagua Jinsia Yako',
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 17,
                 fontWeight: FontWeight.bold,
               ),
             ),

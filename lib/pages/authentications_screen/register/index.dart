@@ -42,13 +42,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 height: 25,
               ),
               const Text(
-                "Create Your Account",
+                "Fungua Account Yako",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text(
-                  "Never miss a dose again! Signup now to manage your medications and stay on top of your healthy journey",
+                  "Usikose dozi tena! Jisajili sasa ili udhibiti dawa zako na usalie katika safari yako ya afya ukitumia application yetu",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 15,
@@ -67,7 +67,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     TextFormField(
                       keyboardType: TextInputType.name,
                       decoration: InputDecoration(
-                        labelText: "Full Name",
+                        labelText: "Jina Kamili",
                         prefixIcon:
                             Icon(Icons.person, color: Styles.primaryColor),
                         border: OutlineInputBorder(
@@ -116,7 +116,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     TextFormField(
                       obscureText: _obscureText2,
                       decoration: InputDecoration(
-                        labelText: "Confirm Password",
+                        labelText: "Rudia Password",
                         prefixIcon:
                             Icon(Icons.lock, color: Styles.primaryColor),
                         suffixIcon: IconButton(
@@ -164,7 +164,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         padding: EdgeInsets.symmetric(
                             vertical: 15), // Adjust padding for height
                         child: Text(
-                          "Sign Up",
+                          "Jisajili",
                           style: TextStyle(color: Colors.white, fontSize: 15),
                         ),
                       ),
@@ -177,11 +177,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    "Already have an account?  ",
+                    "Tayari ushajiunga nasi?  ",
                   ),
                   GestureDetector(
                     child: const Text(
-                      "Sign In", style: TextStyle(fontWeight: FontWeight.bold),
+                      "Ingia", style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     onTap: () {
                       Navigator.push(

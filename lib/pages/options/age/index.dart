@@ -85,7 +85,7 @@ class _AgeScreenState extends State<AgeScreen> {
             const Text(
               'Rika lipi ni sahihi kwako?',
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 17,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -128,7 +128,7 @@ class _AgeScreenState extends State<AgeScreen> {
                   Navigator.push(context, MaterialPageRoute(builder: ((context) => const ButtomBar())));
                   // Handle the next action here
                 },
-                child: const Icon(Icons.arrow_forward),
+                child: const Icon(Icons.arrow_forward, color: Colors.white,),
               ),
             ),
           ],

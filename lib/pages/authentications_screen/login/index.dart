@@ -42,13 +42,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 25,
               ),
               const Text(
-                "Welcome Back",
+                "Karibu Tena!",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text(
-                  "Sign in to access your account and stay connected to your health journey",
+                  "Ingia sasa uweze kupata taarifa za afya yako kwa urahisi zaidi ukitumia application yetu",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 15,
@@ -140,11 +140,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    "Don't have an account?  ",
+                    "Je, hauna account?  ",
                   ),
                   GestureDetector(
                     child: const Text(
-                      "Register Now", style: TextStyle(fontWeight: FontWeight.bold),
+                      "Fungua sasa.", style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     onTap: () {
                       Navigator.push(
