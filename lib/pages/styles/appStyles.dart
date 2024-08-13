@@ -9,6 +9,7 @@ class Styles {
   static Color textColor = const Color.fromARGB(255, 255, 255, 255);
   static Color categoryColor = const Color(0xFF4741A6).withOpacity(0.46);
   static Color pastpaperColor = const Color(0xFF013237);
+  static Color homescreen = const Color(0xFFEFEFEF);
   static Color textWhite = const Color.fromARGB(255, 255, 255, 255);
   static Color textBlack = const Color.fromARGB(255, 255, 255, 255);
   static Color textBlueColor = const Color.fromARGB(255, 255, 255, 255);

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicine_reminder/pages/buttombar/index.dart';
 import 'package:medicine_reminder/pages/styles/appStyles.dart';
 
 class AgeScreen extends StatefulWidget {
@@ -9,14 +10,14 @@ class AgeScreen extends StatefulWidget {
 }
 
 class _AgeScreenState extends State<AgeScreen> {
-  String _selectedAgeGroup = 'Adult';
+  String _selectedAgeGroup = 'Mtu Mzima';
 
   Widget _buildAgeOption(String ageGroup, String imagePath, bool isSelected) {
     return GestureDetector(
       onTap: () {
         setState(() {
           _selectedAgeGroup = ageGroup;
-        });
+        },);
       },
       child: Container(
         decoration: BoxDecoration(
@@ -38,7 +39,7 @@ class _AgeScreenState extends State<AgeScreen> {
                 height: 70,
                 color: isSelected ? Colors.white : Colors.black,
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               Text(
                 ageGroup,
                 style: TextStyle(
@@ -56,7 +57,7 @@ class _AgeScreenState extends State<AgeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Styles.homescreen,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -97,24 +98,24 @@ class _AgeScreenState extends State<AgeScreen> {
                 childAspectRatio: 1.0, // This ensures the height equals the width
                 children: [
                   _buildAgeOption(
-                    'Senior Adult',
+                    'Mzee',
                     'assets/images/senior.png',
-                    _selectedAgeGroup == 'Senior Adult',
+                    _selectedAgeGroup == 'Mzee',
                   ),
                   _buildAgeOption(
-                    'Middle Age',
+                    'Umri wa Kati',
                     'assets/images/middle.png',
-                    _selectedAgeGroup == 'Middle Age',
+                    _selectedAgeGroup == 'Umri wa Kati',
                   ),
                   _buildAgeOption(
-                    'Adult',
+                    'Mtu Mzima',
                     'assets/images/adult.png',
-                    _selectedAgeGroup == 'Adult',
+                    _selectedAgeGroup == 'Mtu Mzima',
                   ),
                   _buildAgeOption(
-                    'Teen',
+                    'Kijana',
                     'assets/images/teen.png',
-                    _selectedAgeGroup == 'Teen',
+                    _selectedAgeGroup == 'Kijana',
                   ),
                 ],
               ),
@@ -124,6 +125,7 @@ class _AgeScreenState extends State<AgeScreen> {
               child: FloatingActionButton(
                 backgroundColor: Styles.splashScreen,
                 onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: ((context) => const ButtomBar())));
                   // Handle the next action here
                 },
                 child: const Icon(Icons.arrow_forward),

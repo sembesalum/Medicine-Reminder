@@ -16,6 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Styles.homescreen,
       body: SafeArea(
         child: Center(
           child: Column(
@@ -25,14 +26,14 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Container(
                 height: MediaQuery.of(context).size.height * 0.1,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  image: DecorationImage(
+                decoration:  BoxDecoration(
+                  color: Styles.homescreen,
+                  image: const DecorationImage(
                     image: AssetImage("assets/images/pill1.png"),
                     fit: BoxFit
                         .contain, // Adjust the image size while keeping its aspect ratio
                   ),
-                  borderRadius: BorderRadius.vertical(
+                  borderRadius: const BorderRadius.vertical(
                     bottom: Radius.circular(30),
                   ),
                 ),

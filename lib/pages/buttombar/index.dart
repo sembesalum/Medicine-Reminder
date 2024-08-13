@@ -50,16 +50,16 @@ class _ButtomBarState extends State<ButtomBar> {
             destinations: const [
               NavigationDestination(
                 icon: Icon(Icons.home_filled),
-                label: "",
+                label: "Nyumbani",
               ),
-              NavigationDestination(icon: Icon(Icons.medical_information), label: ""),
+              NavigationDestination(icon: Icon(Icons.medical_information), label: "Angalia"),
               NavigationDestination(
                 icon: Icon(Icons.add),
-                label: "",
+                label: "Ongeza Dawa",
               ),
               NavigationDestination(
                 icon: Icon(Icons.person),
-                label: "",
+                label: "Profile",
               ),
             ],
           ),

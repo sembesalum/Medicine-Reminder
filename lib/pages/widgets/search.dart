@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medicine_reminder/pages/styles/appLayout.dart';
 import 'package:medicine_reminder/pages/styles/appStyles.dart';
-
 
 class SearchArea extends StatefulWidget {
   const SearchArea({Key? key});
@@ -14,30 +12,30 @@ class _SearchAreaState extends State<SearchArea> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(AppLayout.getWidth(10.0)),
+      padding: const EdgeInsets.all(13),
       child: Container(
-        height: AppLayout.getHeight(55),
+        height: 55,
         decoration: BoxDecoration(
-          color: Styles.searchBar,
+          color: Colors.white,
           border: Border.all(
             color: Styles.borderColor,
           ),
-          borderRadius: BorderRadius.circular(AppLayout.getWidth(8)),
+          borderRadius: BorderRadius.circular(8),
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(10)),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           child: TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               border: InputBorder.none,
-              hintText: "Search",
+              hintText: "Tafuta Dawa",
               hintStyle: TextStyle(
-                color: const Color(0xFF8391A1),
-                fontSize: AppLayout.getHeight(15),
+                color: Color(0xFF8391A1),
+                fontSize: 15,
               ),
               suffixIcon: Icon(
                 Icons.search,
-                color: const Color(0xFF8391A1),
-                size: AppLayout.getWidth(24),
+                color: Color(0xFF8391A1),
+                size: 24,
               ),
             ),
           ),

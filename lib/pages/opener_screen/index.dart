@@ -14,6 +14,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Styles.homescreen,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -24,13 +25,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 children: [
                   Container(
                     height: MediaQuery.of(context).size.height * 0.4,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      image: DecorationImage(
+                    decoration:  BoxDecoration(
+                      color: Styles.homescreen,
+                      image: const DecorationImage(
                         image: AssetImage("assets/images/logo.png"),
                         fit: BoxFit.contain, // Adjust the image size while keeping its aspect ratio
                       ),
-                      borderRadius: BorderRadius.vertical(
+                      borderRadius: const BorderRadius.vertical(
                         bottom: Radius.circular(30),
                       ),
                     ),
