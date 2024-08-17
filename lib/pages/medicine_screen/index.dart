@@ -7,16 +7,22 @@ class MedicineScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: Styles.homescreen,
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Column(
-            children: [
-              MedicinesCards(),
-            ],
-          )
+      appBar: AppBar(
+        backgroundColor: Styles.homescreen,
+        title: const Text(
+          "Dawa Zako",
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
+      ),
+      body: const SingleChildScrollView(
+        child: SafeArea(
+            child: Column(
+          children: [
+            MedicinesCards(),
+          ],
+        )),
       ),
     );
   }

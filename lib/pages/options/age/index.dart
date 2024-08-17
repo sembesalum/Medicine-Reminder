@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medicine_reminder/pages/buttombar/index.dart';
 import 'package:medicine_reminder/pages/styles/appStyles.dart';
+import 'package:medicine_reminder/pages/widgets/age_options.dart'; // Import the new widget
 
 class AgeScreen extends StatefulWidget {
   const AgeScreen({super.key});
@@ -11,48 +12,6 @@ class AgeScreen extends StatefulWidget {
 
 class _AgeScreenState extends State<AgeScreen> {
   String _selectedAgeGroup = 'Mtu Mzima';
-
-  Widget _buildAgeOption(String ageGroup, String imagePath, bool isSelected) {
-    return GestureDetector(
-      onTap: () {
-        setState(() {
-          _selectedAgeGroup = ageGroup;
-        },);
-      },
-      child: Container(
-        decoration: BoxDecoration(
-          color: isSelected ? Styles.splashScreen : Colors.white,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: isSelected ? Styles.splashScreen : Colors.grey,
-            width: 2,
-          ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                imagePath,
-                width: 70,
-                height: 70,
-                color: isSelected ? Colors.white : Colors.black,
-              ),
-              const SizedBox(height: 8),
-              Text(
-                ageGroup,
-                style: TextStyle(
-                  color: isSelected ? Colors.white : Colors.black,
-                  fontWeight: FontWeight.bold, fontSize: 15
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -95,27 +54,47 @@ class _AgeScreenState extends State<AgeScreen> {
                 crossAxisCount: 2,
                 crossAxisSpacing: 16.0,
                 mainAxisSpacing: 16.0,
-                childAspectRatio: 1.0, // This ensures the height equals the width
+                childAspectRatio: 1.0,
                 children: [
-                  _buildAgeOption(
-                    'Mzee',
-                    'assets/images/senior.png',
-                    _selectedAgeGroup == 'Mzee',
+                  AgeOption(
+                    ageGroup: 'Mzee',
+                    imagePath: 'assets/images/senior.png',
+                    isSelected: _selectedAgeGroup == 'Mzee',
+                    onTap: () {
+                      setState(() {
+                        _selectedAgeGroup = 'Mzee';
+                      });
+                    },
                   ),
-                  _buildAgeOption(
-                    'Umri wa Kati',
-                    'assets/images/middle.png',
-                    _selectedAgeGroup == 'Umri wa Kati',
+                  AgeOption(
+                    ageGroup: 'Umri wa Kati',
+                    imagePath: 'assets/images/middle.png',
+                    isSelected: _selectedAgeGroup == 'Umri wa Kati',
+                    onTap: () {
+                      setState(() {
+                        _selectedAgeGroup = 'Umri wa Kati';
+                      });
+                    },
                   ),
-                  _buildAgeOption(
-                    'Mtu Mzima',
-                    'assets/images/adult.png',
-                    _selectedAgeGroup == 'Mtu Mzima',
+                  AgeOption(
+                    ageGroup: 'Mtu Mzima',
+                    imagePath: 'assets/images/adult.png',
+                    isSelected: _selectedAgeGroup == 'Mtu Mzima',
+                    onTap: () {
+                      setState(() {
+                        _selectedAgeGroup = 'Mtu Mzima';
+                      });
+                    },
                   ),
-                  _buildAgeOption(
-                    'Kijana',
-                    'assets/images/teen.png',
-                    _selectedAgeGroup == 'Kijana',
+                  AgeOption(
+                    ageGroup: 'Kijana',
+                    imagePath: 'assets/images/teen.png',
+                    isSelected: _selectedAgeGroup == 'Kijana',
+                    onTap: () {
+                      setState(() {
+                        _selectedAgeGroup = 'Kijana';
+                      });
+                    },
                   ),
                 ],
               ),
@@ -126,7 +105,6 @@ class _AgeScreenState extends State<AgeScreen> {
                 backgroundColor: Styles.splashScreen,
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: ((context) => const ButtomBar())));
-                  // Handle the next action here
                 },
                 child: const Icon(Icons.arrow_forward, color: Colors.white,),
               ),

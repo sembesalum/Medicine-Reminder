@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:medicine_reminder/pages/styles/appStyles.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class TabletAlertCard extends StatefulWidget {
-  const TabletAlertCard({super.key});
+class TabletAlertCardNight extends StatefulWidget {
+  const TabletAlertCardNight({super.key});
 
   @override
-  State<TabletAlertCard> createState() => _TabletAlertCardState();
+  State<TabletAlertCardNight> createState() => _TabletAlertCardNightState();
 }
 
-class _TabletAlertCardState extends State<TabletAlertCard> {
+class _TabletAlertCardNightState extends State<TabletAlertCardNight> {
   final PageController _pageController = PageController();
 
   @override
@@ -20,7 +20,7 @@ class _TabletAlertCardState extends State<TabletAlertCard> {
           children: [
             SizedBox(width: 17.0),
             Text(
-              "Dawa Za Asubuhi",
+              "Dawa Za Usiku",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
             ),
           ],
@@ -39,7 +39,7 @@ class _TabletAlertCardState extends State<TabletAlertCard> {
                       "Maumivu ya Kichwa",
                       "3x",
                       "Day",
-                      "Morning",
+                      "Night",
                       "Kidonge 1",
                       "Taken",
                     ),
@@ -48,7 +48,7 @@ class _TabletAlertCardState extends State<TabletAlertCard> {
                       "Infection",
                       "2x",
                       "Day",
-                      "Morning",
+                      "Night",
                       "Kidonge 1",
                       "Pending",
                     ),
@@ -57,7 +57,7 @@ class _TabletAlertCardState extends State<TabletAlertCard> {
                       "Pain Relief",
                       "3x",
                       "Day",
-                      "Morning",
+                      "Night",
                       "Kidonge 2",
                       "Taken",
                     ),

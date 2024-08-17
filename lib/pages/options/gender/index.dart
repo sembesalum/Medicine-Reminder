@@ -1,57 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:medicine_reminder/pages/options/age/index.dart';
 import 'package:medicine_reminder/pages/styles/appStyles.dart';
+import 'package:medicine_reminder/pages/options/age/index.dart';
+import 'package:medicine_reminder/pages/widgets/gender_selection.dart';
 
-class GenderScreen extends StatefulWidget {
+class GenderScreen extends StatelessWidget {
   const GenderScreen({super.key});
-
-  @override
-  State<GenderScreen> createState() => _GenderScreenState();
-}
-
-class _GenderScreenState extends State<GenderScreen> {
-  String _selectedGender = 'Kiume';
-
-  Widget _buildGenderOption(String gender, IconData iconData, bool isSelected) {
-    return GestureDetector(
-      onTap: () {
-        setState(() {
-          _selectedGender = gender;
-        });
-      },
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-          side: BorderSide(
-            color: isSelected ? Styles.splashScreen : Colors.grey,
-            width: 2,
-          ),
-        ),
-        color: isSelected ? Styles.splashScreen : Colors.white,
-        child: Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Row(
-            children: [
-              Icon(
-                iconData,
-                size: 40,
-                color: isSelected ? Colors.white : Colors.black,
-              ),
-              const SizedBox(width: 16),
-              Text(
-                gender,
-                style: TextStyle(
-                  color: isSelected ? Colors.white : Colors.black,
-                  fontWeight: FontWeight.normal,
-                  fontSize: 15,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -90,26 +43,10 @@ class _GenderScreenState extends State<GenderScreen> {
             ),
             const SizedBox(height: 20),
             Expanded(
-              child: ListView(
-                children: [
-                  _buildGenderOption(
-                    'Kiume',
-                    Icons.male,
-                    _selectedGender == 'Kiume',
-                  ),
-                  const SizedBox(height: 16),
-                  _buildGenderOption(
-                    'Kike',
-                    Icons.female,
-                    _selectedGender == 'Kike',
-                  ),
-                  const SizedBox(height: 16),
-                  _buildGenderOption(
-                    'Jinsia Nyingine',
-                    Icons.transgender,
-                    _selectedGender == 'Jinsia Nyingine',
-                  ),
-                ],
+              child: GenderSelection(
+                onGenderSelected: (String gender) {
+                  // Handle gender selection if needed
+                },
               ),
             ),
             Align(

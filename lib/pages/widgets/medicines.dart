@@ -20,15 +20,11 @@ class MedicinesCards extends StatelessWidget {
       children: [
         const Row(
           children: [
-            SizedBox(width: 17.0),
-            Text(
-              "Dawa Zako",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-            ),
+            
           ],
         ),
         ...medicines.map((medicine) => Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0), // Adjusted padding
+          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0), // Adjusted padding
           child: Container(
             height: 120, // Reduced height
             width: double.infinity,

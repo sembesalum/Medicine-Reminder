@@ -19,19 +19,21 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
   int nightDose = 0;
   int selectedDays = 30; // Default to 30 days
 
-  String medicineName = "Atorvastatin"; // Initial medicine name
-  String medicineReason = "Maumivu ya Mbavu"; // Initial medicine name
+  String medicineName = "Panadol"; // Initial medicine name
+  String medicineReason = "Maumivu ya Kichwa"; // Initial medicine name
 
   void _incrementDose(String timeOfDay) {
-    setState(() {
-      if (timeOfDay == "Asubuhi") {
-        morningDose++;
-      } else if (timeOfDay == "Mchana") {
-        eveningDose++;
-      } else if (timeOfDay == "Usiku") {
-        nightDose++;
-      }
-    });
+    setState(
+      () {
+        if (timeOfDay == "Asubuhi") {
+          morningDose++;
+        } else if (timeOfDay == "Mchana") {
+          eveningDose++;
+        } else if (timeOfDay == "Usiku") {
+          nightDose++;
+        }
+      },
+    );
   }
 
   void _decrementDose(String timeOfDay) {
@@ -65,7 +67,8 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
                 children: [
                   Text(
                     "$tempSelectedDays siku",
-                    style: const TextStyle(color: Colors.black).copyWith(fontSize: 20),
+                    style: const TextStyle(color: Colors.black)
+                        .copyWith(fontSize: 20),
                   ),
                   Slider(
                     value: tempSelectedDays.toDouble(),
@@ -88,7 +91,8 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: const Text("BATILISHA", style: TextStyle(color: Colors.black)),
+              child: const Text("BATILISHA",
+                  style: TextStyle(color: Colors.black)),
             ),
             ElevatedButton(
               onPressed: () {
@@ -97,7 +101,8 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Styles.splashScreen,
               ),
-              child: Text("THIBITISHA", style: TextStyle(color: Styles.homescreen)),
+              child: Text("THIBITISHA",
+                  style: TextStyle(color: Styles.homescreen)),
             ),
           ],
         );
@@ -105,9 +110,11 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
     );
 
     if (result != null) {
-      setState(() {
-        selectedDays = result;
-      });
+      setState(
+        () {
+          selectedDays = result;
+        },
+      );
     }
   }
 
@@ -122,6 +129,7 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
       ),
       builder: (BuildContext context) {
         String tempMedicineName = medicineName;
+        String tempMedicineReason = medicineReason;
 
         return Padding(
           padding: EdgeInsets.only(
@@ -133,11 +141,11 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
+              const Text(
                 "Weka Jina La Dawa",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               TextField(
                 onChanged: (value) {
                   tempMedicineName = value;
@@ -147,10 +155,21 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
                   border: OutlineInputBorder(),
                 ),
               ),
+              const SizedBox(height: 10),
+              TextField(
+                onChanged: (value) {
+                  tempMedicineReason = value;
+                },
+                decoration: const InputDecoration(
+                  labelText: "Sababu ya kunywa Dawa",
+                  border: OutlineInputBorder(),
+                ),
+              ),
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   setState(() {
+                    medicineReason = tempMedicineReason;
                     medicineName = tempMedicineName;
                   });
                   Navigator.pop(context);
@@ -158,7 +177,8 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Styles.splashScreen,
                 ),
-                child: const Text("HIFADHI", style: TextStyle(color: Colors.white)),
+                child: const Text("HIFADHI",
+                    style: TextStyle(color: Colors.white)),
               ),
               const SizedBox(height: 16),
             ],
@@ -210,9 +230,9 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
                                   fontWeight: FontWeight.bold,
                                   fontSize: 18),
                             ),
-                            const Text(
-                              "Cardiovascular",
-                              style: TextStyle(
+                             Text(
+                              medicineReason,
+                              style: const TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.normal,
                                   fontSize: 14),
@@ -261,7 +281,8 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
                 GestureDetector(
                   onTap: _selectDays,
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0, vertical: 12.0),
                     decoration: BoxDecoration(
                       color: Colors.grey.shade200,
                       borderRadius: BorderRadius.circular(12),
@@ -284,10 +305,16 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
             child: FloatingActionButton(
               backgroundColor: Styles.splashScreen,
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: ((context) => const ButtomBar())));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const ButtomBar())));
                 // Handle the next action here
               },
-              child: const Icon(Icons.check,color: Colors.white,),
+              child: const Icon(
+                Icons.check,
+                color: Colors.white,
+              ),
             ),
           ),
         ],
@@ -295,7 +322,8 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
     );
   }
 
-  Widget _buildTimeCheckbox(String label, bool isChecked, ValueChanged<bool?> onChanged) {
+  Widget _buildTimeCheckbox(
+      String label, bool isChecked, ValueChanged<bool?> onChanged) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -327,7 +355,9 @@ class _AddMedicineScreenState extends State<AddMedicineScreen> {
                   onPressed: () => _decrementDose(label),
                   icon: const Icon(Icons.remove),
                 ),
+                const SizedBox(width: 25),
                 Text("$dose", style: const TextStyle(fontSize: 16)),
+                const SizedBox(width: 25),
                 IconButton(
                   onPressed: () => _incrementDose(label),
                   icon: const Icon(Icons.add),

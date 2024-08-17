@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:medicine_reminder/pages/styles/appStyles.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class TabletAlertCard extends StatefulWidget {
-  const TabletAlertCard({super.key});
+class TabletAlertCardAfternoon extends StatefulWidget {
+  const TabletAlertCardAfternoon({super.key});
 
   @override
-  State<TabletAlertCard> createState() => _TabletAlertCardState();
+  State<TabletAlertCardAfternoon> createState() => _TabletAlertCardAfternoonState();
 }
 
-class _TabletAlertCardState extends State<TabletAlertCard> {
+class _TabletAlertCardAfternoonState extends State<TabletAlertCardAfternoon> {
   final PageController _pageController = PageController();
 
   @override
@@ -20,7 +20,7 @@ class _TabletAlertCardState extends State<TabletAlertCard> {
           children: [
             SizedBox(width: 17.0),
             Text(
-              "Dawa Za Asubuhi",
+              "Dawa Za Mchana",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
             ),
           ],
@@ -39,7 +39,7 @@ class _TabletAlertCardState extends State<TabletAlertCard> {
                       "Maumivu ya Kichwa",
                       "3x",
                       "Day",
-                      "Morning",
+                      "Afternoon",
                       "Kidonge 1",
                       "Taken",
                     ),
@@ -48,7 +48,7 @@ class _TabletAlertCardState extends State<TabletAlertCard> {
                       "Infection",
                       "2x",
                       "Day",
-                      "Morning",
+                      "Afternoon",
                       "Kidonge 1",
                       "Pending",
                     ),
@@ -57,7 +57,7 @@ class _TabletAlertCardState extends State<TabletAlertCard> {
                       "Pain Relief",
                       "3x",
                       "Day",
-                      "Morning",
+                      "Afternoon",
                       "Kidonge 2",
                       "Taken",
                     ),

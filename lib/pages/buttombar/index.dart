@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medicine_reminder/pages/add_medicine/index.dart';
 import 'package:medicine_reminder/pages/homepage_screen/index.dart';
 import 'package:medicine_reminder/pages/medicine_screen/index.dart';
+import 'package:medicine_reminder/pages/profile/index.dart';
 import 'package:medicine_reminder/pages/styles/appLayout.dart';
 
 
@@ -18,7 +19,7 @@ class _ButtomBarState extends State<ButtomBar> {
     const Homepage(),
     const MedicineScreen(),
     const AddMedicineScreen(),
-    const Text("Profile")
+    const ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {

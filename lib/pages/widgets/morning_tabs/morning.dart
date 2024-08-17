@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:medicine_reminder/pages/styles/appStyles.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class TabletAlertCard extends StatefulWidget {
-  const TabletAlertCard({super.key});
+class TabletAlertCardMorning extends StatefulWidget {
+  const TabletAlertCardMorning({super.key});
 
   @override
-  State<TabletAlertCard> createState() => _TabletAlertCardState();
+  State<TabletAlertCardMorning> createState() => _TabletAlertCardMorningState();
 }
 
-class _TabletAlertCardState extends State<TabletAlertCard> {
+class _TabletAlertCardMorningState extends State<TabletAlertCardMorning> {
   final PageController _pageController = PageController();
 
   @override
