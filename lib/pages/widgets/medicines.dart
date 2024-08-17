@@ -71,7 +71,7 @@ class MedicinesCards extends StatelessWidget {
                           IconButton(
                             onPressed: () {},
                             icon: const Icon(
-                              Icons.more_vert,
+                              Icons.delete,
                               size: 23,
                             ),
                           ),

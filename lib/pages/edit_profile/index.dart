@@ -92,7 +92,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     textAlign: TextAlign.start,
                     decoration: const InputDecoration(
                       border: InputBorder.none,
-                      hintText: "Mr John Doe",
+                      hintText: "Mr Mbaraka Sembe",
                       hintStyle: TextStyle(
                         color: Colors.black,
                         fontSize: 15,
@@ -141,7 +141,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: GridView.count(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 crossAxisCount: 2,
                 crossAxisSpacing: 16.0,

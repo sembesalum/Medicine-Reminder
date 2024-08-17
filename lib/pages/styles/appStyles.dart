@@ -26,105 +26,105 @@ class Styles {
   static Color orangeColor = const Color(0xFFF37B67);
   static Color kakiColor = const Color(0xFFd2bdb6);
   static TextStyle normalText = GoogleFonts.fredoka(
-    fontSize: 12.sp,
+    fontSize: 12,
   );
 
   static TextStyle header = GoogleFonts.poppins(
-    fontSize: 24.sp,
+    fontSize: 24,
     fontWeight: FontWeight.bold,
     color: Colors.black,
   );
 
   static TextStyle headerMain = GoogleFonts.poppins(
-    fontSize: 27.sp,
+    fontSize: 27,
     fontWeight: FontWeight.bold,
     color: Colors.black,
   );
 
   static TextStyle headerMain2 = GoogleFonts.poppins(
-    fontSize: 18.sp,
+    fontSize: 18,
     fontWeight: FontWeight.bold,
     color: Colors.black,
   );
 
   static TextStyle headerMain3 = GoogleFonts.poppins(
-    fontSize: 11.sp,
+    fontSize: 11,
     fontWeight: FontWeight.bold,
     color: Colors.black,
   );
 
   static TextStyle headerMain4 = GoogleFonts.poppins(
-    fontSize: 17.sp,
+    fontSize: 17,
     fontWeight: FontWeight.bold,
     color: Colors.black,
   );
 
   static TextStyle headerMain5 = GoogleFonts.poppins(
-    fontSize: 12.sp,
+    fontSize: 12,
     fontWeight: FontWeight.bold,
     color: Colors.white,
   );
 
   static TextStyle normal = GoogleFonts.poppins(
-    fontSize: 16.sp,
+    fontSize: 16,
     fontWeight: FontWeight.w400,
     color: Colors.black,
     fontStyle: FontStyle.normal,
   );
 
   static TextStyle buttonText = GoogleFonts.poppins(
-    fontSize: 16.sp,
+    fontSize: 16,
     fontWeight: FontWeight.bold,
     color: Colors.white,
   );
 
   static TextStyle buttonText1 = GoogleFonts.poppins(
-    fontSize: 16.sp,
+    fontSize: 16,
     fontWeight: FontWeight.bold,
     color: Colors.black,
   );
 
   static TextStyle hintText = GoogleFonts.poppins(
-    fontSize: 15.sp,
+    fontSize: 15,
     fontWeight: FontWeight.bold,
     fontStyle: FontStyle.normal,
     color: const Color(0xFF8391A1),
   );
 
   static TextStyle normal1 = GoogleFonts.poppins(
-    fontSize: 10.sp,
+    fontSize: 10,
     fontWeight: FontWeight.w400,
     color: Colors.white,
     fontStyle: FontStyle.normal,
   );
 
   static TextStyle normal2 = GoogleFonts.poppins(
-    fontSize: 25.sp,
+    fontSize: 25,
     fontWeight: FontWeight.w400,
     color: Colors.white,
     fontStyle: FontStyle.normal,
   );
 
   static TextStyle newsTitle = GoogleFonts.poppins(
-    fontSize: 15.sp,
+    fontSize: 15,
     fontWeight: FontWeight.bold,
     color: Colors.white,
   );
 
   static TextStyle newsContent = GoogleFonts.poppins(
-    fontSize: 10.sp,
+    fontSize: 10,
     fontWeight: FontWeight.bold,
     color: Colors.white54,
   );
 
   static TextStyle bottomnav = GoogleFonts.poppins(
-    fontSize: 12.sp,
+    fontSize: 12,
     fontWeight: FontWeight.w500,
     color: Colors.black,
   );
 
   static TextStyle readContent = GoogleFonts.poppins(
-    fontSize: 15.sp,
+    fontSize: 15,
     fontWeight: FontWeight.normal,
     color: Colors.black,
   );

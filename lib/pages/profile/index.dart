@@ -44,7 +44,7 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       IconButton(
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> EditProfileScreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> const EditProfileScreen()));
                         },
                         icon: const Icon(Icons.edit_outlined),
                       ),
@@ -80,7 +80,7 @@ class ProfileScreen extends StatelessWidget {
               const Column(
                 children: [
                   Text(
-                    "Mr John Doe",
+                    "Mr Mbaraka Sembe",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
                   SizedBox(height: 5),

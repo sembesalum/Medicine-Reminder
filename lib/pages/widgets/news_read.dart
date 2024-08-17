@@ -4,7 +4,7 @@ import 'package:medicine_reminder/pages/styles/appLayout.dart';
 import 'package:medicine_reminder/pages/styles/appStyles.dart';
 
 class DetailsScreen extends StatefulWidget {
-  DetailsScreen(this.data, {Key? key}) : super(key: key);
+  const DetailsScreen(this.data, {Key? key}) : super(key: key);
   final NewsData data;
 
   @override
@@ -30,18 +30,17 @@ class _DetailsScreenState extends State<DetailsScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                widget.data.title!,
+                widget.data.title ?? 'No Title',
                 style: Styles.newsTitle.copyWith(color: Colors.black),
               ),
               SizedBox(
                 height: AppLayout.getHeight(8.0),
               ),
-              
               SizedBox(
                 height: AppLayout.getHeight(10.0),
               ),
               Hero(
-                tag: "${widget.data.title}",
+                tag: widget.data.title ?? 'HeroTag',
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12.0),
                   child: SizedBox(
@@ -49,7 +48,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     width: double.infinity,
                     child: FittedBox(
                       fit: BoxFit.fill,
-                      child: Image.asset("assets/images/${widget.data.image!}"),
+                      child: Image.asset("assets/images/${widget.data.image ?? 'default.png'}"),
                     ),
                   ),
                 ),
@@ -57,7 +56,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
               const SizedBox(
                 height: 15,
               ),
-              Text(widget.data.content!),
+              Text(widget.data.content ?? 'No Content'),
             ],
           ),
         ),

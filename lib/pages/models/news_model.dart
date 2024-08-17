@@ -12,22 +12,22 @@ class NewsData {
   static List<NewsData> doctorNewsData = [
     NewsData(
       "Je, unapiga mswaki vya kutosha?",
-      "A 'Study Buddy Website' refers to an online platform or website designed to connect individuals who are looking for study partners or groups. The primary purpose of these websites is to facilitate collaboration and mutual support among students or learners pursuing similar subjects or courses, A 'Study Buddy Website' refers to an online platform or website designed to connect individuals who are looking for study partners or groups. The primary purpose of these websites is to facilitate collaboration and mutual support among students or learners pursuing similar subjects or courses. A 'Study Buddy Website' refers to an online platform or website designed to connect individuals who are looking for study partners or groups. The primary purpose of these websites is to facilitate collaboration and mutual support among students or learners pursuing similar subjects or courses, A 'Study Buddy Website' refers to an online platform or website designed to connect individuals who are looking for study partners or groups. The primary purpose of these websites is to facilitate collaboration and mutual support among students or learners pursuing similar subjects or courses.",
+      "Mswaki ni kifaa muhimu katika kudumisha afya ya kinywa. Hivyo, ni muhimu kuhakikisha kuwa unatumia mswaki vizuri mara mbili kwa siku. Kumbuka pia kubadilisha mswaki wako kila baada ya miezi mitatu.",
       "news1.png",
     ),
     NewsData(
       "Zuia Kunywa Dawa Ovyo",
-      "The main objective of a study buddy website in a Sokoine of Agriculture University is to enhance the learning experience of students by fostering collaboration, peer support, and shared understanding of academic materials. ",
+      "Kunywa dawa kwa usahihi ni muhimu kwa matibabu bora. Kunywa dawa kama ilivyoelekezwa na daktari wako ili kuhakikisha kuwa unapata matokeo bora. Kunywa dawa ovyo kunaweza kupunguza ufanisi wa matibabu.",
       "news4.png",
     ),
     NewsData(
       "Madhara ya Dawa Tatu",
-      "The significance of a study buddy website in a Sokoine of Agriculture University setting lies in its ability to enhance the overall learning experience for students and contribute to their academic success. Here are several key aspects highlighting the significance of study buddy websites in universities",
+      "Matumizi ya dawa nyingi kwa wakati mmoja yanaweza kusababisha madhara kama vile mhemko wa tumbo, kichefuchefu, au kuongezeka kwa athari za upande. Ni muhimu kufuata maagizo ya daktari kuhusu matumizi ya dawa.",
       "news3.png",
     ),
     NewsData(
       "Ushauri wa Dozi",
-      "The significance of a study buddy website in a Sokoine of Agriculture University setting lies in its ability to enhance the overall learning experience for students and contribute to their academic success. Here are several key aspects highlighting the significance of study buddy websites in universities",
+      "Dozi sahihi ya dawa ni muhimu kwa ufanisi wa matibabu. Hakikisha kuwa unafuata maelekezo ya daktari kuhusu dozi na muda wa kuchukua dawa ili kuhakikisha matokeo bora na kuepuka athari zisizohitajika.",
       "news2.png",
     ),
   ];

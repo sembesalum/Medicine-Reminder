@@ -1,5 +1,6 @@
-// doctor_advice.dart
 import 'package:flutter/material.dart';
+import 'package:medicine_reminder/pages/models/news_model.dart';
+import 'package:medicine_reminder/pages/widgets/news_read.dart'; // Import the DetailsScreen
 
 class DoctorAdvice extends StatelessWidget {
   const DoctorAdvice({super.key});
@@ -8,30 +9,32 @@ class DoctorAdvice extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 17.0),
-      child: GridView.count(
+      child: GridView.builder(
         shrinkWrap: true,
-        crossAxisCount: 2,
-        crossAxisSpacing: 10.0,
-        mainAxisSpacing: 10.0,
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 10.0,
+          mainAxisSpacing: 10.0,
+        ),
         physics: const NeverScrollableScrollPhysics(),
-        children: [
-          _buildGridItem(
-            "assets/images/news1.png",
-            'Je, unapiga mswaki vya kutosha?',
-          ),
-          _buildGridItem(
-            "assets/images/news4.png",
-            'Zuia Kunywa Dawa Ovyo',
-          ),
-          _buildGridItem(
-            "assets/images/news3.png",
-            'Madhara ya Dawa Tatu',
-          ),
-          _buildGridItem(
-            "assets/images/news2.png",
-            'Ushauri wa Dozi',
-          ),
-        ],
+        itemCount: NewsData.doctorNewsData.length,
+        itemBuilder: (context, index) {
+          final newsItem = NewsData.doctorNewsData[index];
+          return GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(newsItem),
+                ),
+              );
+            },
+            child: _buildGridItem(
+              "assets/images/${newsItem.image}",
+              newsItem.title ?? 'No Title',
+            ),
+          );
+        },
       ),
     );
   }
