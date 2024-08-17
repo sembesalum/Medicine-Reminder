@@ -102,7 +102,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             const Row(
               children: [
                 SizedBox(width: 15),
@@ -128,7 +128,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             const Row(
               children: [
                 SizedBox(width: 15),
@@ -141,6 +141,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: GridView.count(
+                physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 crossAxisCount: 2,
                 crossAxisSpacing: 16.0,
